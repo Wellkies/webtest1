@@ -52,7 +52,7 @@ app.get('/', async(req, res) => {
   //     return element ? element.innerHTML.trim() || "Div found but no text!" : "Div not found!";
   // });
     // res.json({htmlContent:divContent,status:"true"})
-    res.json({htmlContent:"HIIII",status:"true"})
+    res.json({htmlContent:"HIIII updated",status:"true"})
 
     // await browser.close();
   } catch (error) {
