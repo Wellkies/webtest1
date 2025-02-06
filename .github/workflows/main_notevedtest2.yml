@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - notevedtest1
+name: Build and deploy Node.js app to Azure Web App - Notevedtest2
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '20.x'
+          node-version: '18.x'
 
       - name: npm install, build, and test
         run: |
@@ -60,15 +60,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6402F971381547CB97E90BB2132E081C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0E75AA3ED55E4B15A20D57E2E1B93647 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_AE2D7DDE1BB54085B64951513B3FB0E9 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0F075FA09D734E17990DBD4D5F5765AC }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_63BA378523B34A27A3F61C99FF65B99E }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_89C615FC35284616A5ACAA0631795250 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'notevedtest1'
+          app-name: 'Notevedtest2'
           slot-name: 'Production'
           package: .
           
